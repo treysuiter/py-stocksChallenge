@@ -25,24 +25,15 @@ report = {}
 
 for purchase in purchases:
 
-    # print(purchase[0])
-
     if purchase[0] in report:
-
         report[purchase[0]].append(purchase)
 
     else:
-
         report[purchase[0]] = [purchase]
-
-
-
 
 for report_section in report.items():
 
     total = 0
-
-    # print(report_section, "report section")
 
     print(f"------ {report_section[0]} ------")
     for report_entry in report_section[1]:
