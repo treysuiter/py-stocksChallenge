@@ -17,6 +17,5 @@ purchases = [
 #     print(stock, name)
 
 for purchase in purchases:
-    print(f"{stockDict['GM']}")
-    print(purchase[0])
-    print(f"I purchased {stockDict[purchase[0]]}")
+    
+    print(f"I purchased {stockDict[purchase[0]]} stock for ${purchase[1] * purchase[3]}.")
