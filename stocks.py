@@ -29,20 +29,26 @@ for purchase in purchases:
 
     if purchase[0] in report:
 
-        print('symbol', purchase[0])
-        report[purchase[0]] = report[purchase[0]].append(purchase)
+        report[purchase[0]].append(purchase)
 
     else:
-        print(purchase, 'this is new purchase')
-        # report[purchase[0]] = 
+
         report[purchase[0]] = [purchase]
 
 
-print('report', report)
 
-# test_dict = {}
 
-# test_dict["entry_one"] = []
-# test_dict["entry_one"].append("This")
+for report_section in report.items():
 
-# print(test_dict)
+    total = 0
+
+    # print(report_section, "report section")
+
+    print(f"------ {report_section[0]} ------")
+    for report_entry in report_section[1]:
+        # print(report_entry, "report entry")
+        print(f"{report_entry[1]} shares at {report_entry[3]} dollars on {report_entry[2]}")
+        total += report_entry[1] * report_entry[3]
+    print()
+    print(f"Total value of stock in portfolio: ${total}.")
+    print()
